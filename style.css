@@ -65,51 +65,9 @@
     background-position: 0% 50%;
   }
 }
-  margin: 0;
+
+      margin: 0;
     }
-
-.dialog {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  opacity: 0;
-  transform: scale(0.8);
-  pointer-events: none;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.dialog.open {
-  opacity: 1;
-  transform: scale(1);
-  pointer-events: auto;
-}
-
-.dialog-content {
-  background-color: #fff;
-  padding: 2em;
-  border-radius: 10px;
-  width: 400px;
-  position: relative;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #333;
-}
-
     .sidebar {
       height: 100%;
       width: 0;
@@ -253,3 +211,71 @@
     .footer-link:hover, .footer-　　　　　icon:hover {
       color: #4d90fe;
     }
+.dialog {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.dialog.open {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.dialog-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: dialogSlideIn 0.5s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #333;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+  background-color: #ddd;
+  transform: scale(1.1);
+}
+
+
+@keyframes dialogSlideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
