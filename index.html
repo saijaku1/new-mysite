@@ -68,6 +68,15 @@
   setTimeout(load, 1000);
   function load() {
     document.body.classList.add("loaded");
+    var dialog = document.getElementById("dialog");
+    dialog.classList.add("open");
+});
+
+function closeDialog() {
+  var dialog = document.getElementById("dialog");
+  dialog.classList.remove("open");
+}
+
   }
 });
 
