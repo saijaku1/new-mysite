@@ -7,18 +7,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
   <div id="loading">
     <div class="circle-spin-1"></div>
   </div>
 
-  <div id="dialog" class="dialog">
+ <div id="dialog" class="dialog">
   <div class="dialog-content">
-    <span class="close-btn" onclick="closeDialog()">×</span>
-    <h2>お知らせ</h2>
+    <button class="close-btn" onclick="closeDialog()">×</button>
+    <h2>お知らせ！</h2>
     <p>このサイトをご覧いただきありがとうございます。しかしながらこのサイトはまだ<b>Beta版</b>であるので、バグが多発する可能性があります。それを理解した上でご覧ください。</p>
   </div>
 </div>
+
 
   <div id="sidebar" class="sidebar">
     <a href="https://mysite.f5.si">ホーム</a>
@@ -38,20 +38,20 @@
   <div class="border1">
     <div class="heading1">
       <p>ニュース</p>
-      </div>
+    </div>
     <div class="text1">
       <p>2代目のmysiteが登場！</p>     
-      </div>
+    </div>
     <a href="https://mysite.f5.si/en" class="read-more">英語版サイトを見る</a>
   </div>
   
   <div class="border1">
     <div class="heading1">
       <p>ブログ</p>
-      </div>
+    </div>
     <div class="text1">
       <p>まだありません。</p>
-      </div>
+    </div>
     <a href="https://mysite.f5.si/en" class="read-more">英語版サイトを見る</a>
   </div>
 
@@ -64,19 +64,14 @@
   </footer>
 
   <script>
- window.addEventListener("load", function () {
+window.addEventListener("load", function () {
   setTimeout(load, 1000);
   function load() {
     document.body.classList.add("loaded");
-    var dialog = document.getElementById("dialog");
-    dialog.classList.add("open");
-});
-
-function closeDialog() {
-  var dialog = document.getElementById("dialog");
-  dialog.classList.remove("open");
-}
-
+    setTimeout(() => {
+      var dialog = document.getElementById("dialog");
+      dialog.classList.add("open");
+    }, 2000);
   }
 });
 
@@ -92,6 +87,11 @@ function toggleSidebar() {
   }
 }
 
+function closeDialog() {
+  var dialog = document.getElementById("dialog");
+  dialog.classList.remove("open");
+}
   </script>
 </body>
 </html>
+
