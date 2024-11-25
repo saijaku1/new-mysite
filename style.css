@@ -279,3 +279,32 @@
     opacity: 1;
   }
 }
+/* スマホ向けのレイアウト調整 */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* スマホ向けの幅調整 */
+  }
+
+  .border1 {
+    width: 90%; /* コンテンツ幅を画面幅に合わせる */
+    margin: 10px auto;
+  }
+
+  .title {
+    height: 200px; /* ヘッダーを少し小さく */
+  }
+
+  .title h1 {
+    font-size: 2em; /* タイトルサイズを調整 */
+  }
+
+  .open-btn {
+    top: 15px; 
+    left: 15px; 
+    font-size: 18px; /* ボタンを少し小さく */
+  }
+
+  .dialog-content {
+    width: 90%; /* ダイアログを画面に収める */
+  }
+}
