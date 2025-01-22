@@ -1,1 +1,0 @@
-/tp ~ ~ ~ [place=JAPAN] target @s && kazuma
